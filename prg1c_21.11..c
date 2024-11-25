@@ -192,6 +192,7 @@ int main() {
 		else if (hra_checked[sloupec][radek] >= 10) {
 			printf("\n\r");
 			printf("tato souradnice je jiz odkryta!\n\r");
+			vypis_hry;
 			continue;
 		}
 		else {
@@ -204,5 +205,5 @@ int main() {
 		}
 	}
 	printf("konec hry!!!\n\r");
-	printf("vase skore: %d\n\r", count);
+	printf("vase skore: %d/80\n\r", count);
 }
