@@ -16,6 +16,8 @@ int sloupec = 0;
 int var1;
 int var2;
 
+int count = 0;
+
 void vypis_dat() {
 	printf("    ");
 	for (int i = 1; i <= 10; i++) {
@@ -138,7 +140,7 @@ int main() {
 	}
 
 	printf("    ");
-	for (int i = 0; i <= 9; i++) {
+	for (int i = 1; i <= 10; i++) {
 		printf(" %d ", i);
 	}
 	printf("\n\r");
@@ -182,6 +184,7 @@ int main() {
 			break;
 		}
 		else if(data[sloupec][radek] == -1){  //trefa miny
+			vypis_dat();
 			printf("\n\r");
 			printf("BOOM! trefil si minu\n\r");
 			break;
@@ -189,7 +192,7 @@ int main() {
 		else if (hra_checked[sloupec][radek] >= 10) {
 			printf("\n\r");
 			printf("tato souradnice je jiz odkryta!\n\r");
-			break;
+			continue;
 		}
 		else {
 			hra[sloupec][radek] = data[sloupec][radek];
@@ -197,7 +200,9 @@ int main() {
 
 			printf("pocet min v okoli: %d\n\r", hra[sloupec][radek]);
 			vypis_hry();
+			count++;
 		}
 	}
 	printf("konec hry!!!\n\r");
+	printf("vase skore: %d\n\r", count);
 }
