@@ -133,6 +133,8 @@ int main() {
 	} 
 	//------------------------------------
 	//generovani prvniho prazdneho pole
+
+	printf("--------------- M I N E S W E E P E R --------------\n\r");
 	for (int i = 0; i < 10; i++) {
 		for (int j = 0; j < 10; j++) {
 			hra[i][j] = -2;
@@ -204,6 +206,7 @@ int main() {
 			count++;
 		}
 	}
-	printf("konec hry!!!\n\r");
+	printf("---------------- !!! K O N E C   H R Y !!! -----------------\n\r");
+	printf("\n\r");
 	printf("vase skore: %d/80\n\r", count);
 }
